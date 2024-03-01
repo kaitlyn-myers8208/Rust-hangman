@@ -17,7 +17,7 @@ Rust
 
 # Useful Websites
 
-* [Name]()
+* [Rust official website](https://www.rust-lang.org/tools/install)
 * [Name]()
 * [Name]()
 * [Name]()
