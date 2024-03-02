@@ -1,0 +1,13 @@
+<Cargo Commands>
+
+cargo check -> checks to see if it compiles
+cargo build -> compiles the code
+cargo run -> builds and runs the code
+cargo new project_name -> creates a new project with
+    needed files
+
+
+<Rust Commands>
+
+rustc file_name -> builds without Cargo
+file_name.exe -> runs file after build
