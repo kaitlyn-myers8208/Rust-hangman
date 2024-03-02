@@ -18,7 +18,7 @@ Rust
 # Useful Websites
 
 * [Rust official website](https://www.rust-lang.org/tools/install)
-* [Name]()
+* [Rust textbook - functions](https://doc.rust-lang.org/book/ch03-03-how-functions-work.html)
 * [Name]()
 * [Name]()
 * [Name]()
