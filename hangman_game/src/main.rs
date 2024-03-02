@@ -15,29 +15,57 @@ use std::{
 fn main() {
     println!("This is my Hangman game!");
 
-    let rand_num = rand::thread_rng().gen_range(1..=828);
-    println!("Random number is: {rand_num}");
+    // get_word();
+    let mut word = String::new();
+    word = "face".to_string();    
 
-    let words = lines_from_file("words.txt");
-    // for line in words {
-    //     println!("{:?}", line);
-    // }
-    // let mut word = String::new();
-    // let word = words[rand_num];
     
-    if let Some(word) = words.get(rand_num - 1) {
-        println!("Random word: {}", word);
-    } else {
-        println!("Failed to get word at index {}", rand_num);
+    loop {
+        println!("Guess a letter: ");
+
+        let mut guess = String::new();
+        io::stdin()
+            .read_line(&mut guess)
+            .expect("failed to read line");
+        let guess: char = match guess.trim().parse() {
+            Ok(guess) => guess,
+            Err(_) => continue,
+        };    
+
+        // TO DO
+        // create a list of letters that we can compare to so you don't reset the letters every time
+        // add the bad letters to print out
+        // give them only 5 guess or so
+        // make a win statement
+
+
+
+
+        // let guess: char = guess.trim().parse().expect("Please type a letter!");
+        // let mut file = File::open("words.txt");
+        
+        display_word(&word, guess);
     }
-    
-    
-    // let mut file = File::open("words.txt");
-    
-    // display_word(word);
 }
 
-fn display_word(word: String) {
+fn display_word(word: &String, guess: char) {
+    // let length = word.len();
+    // let letters = 
+    // let user_guess = guess;
+    for letter in word.chars() {
+        // println!("This {letter}");
+        if letter == guess {
+            print!("{letter}");
+        } else {
+            print!("_")
+        }
+        // match letter {
+        //     {guess} => print!("{letter}"),
+        //     _ => print!("_"),
+        // };
+        // println!("_");
+    }
+    println!();
     println!("The word is {word}");
 }
 
@@ -48,6 +76,19 @@ fn lines_from_file(filename: impl AsRef<Path>) -> Vec<String> {
         .map(|l| l.expect("Could not parse line"))
         .collect()
 }
+
+// fn get_word() {
+//     let rand_num = rand::thread_rng().gen_range(1..=828);
+//     // println!("Random number is: {rand_num}");
+//     let words = lines_from_file("words.txt");
+
+//     if let Some(word) = words.get(rand_num - 1) {
+//         // println!("Random word: {}", word);
+//         display_word(word);
+//     } else {
+//         println!("Failed to get word at index {}", rand_num);
+//     }
+// }
 
 
 // write function that puts the underscores for length of word

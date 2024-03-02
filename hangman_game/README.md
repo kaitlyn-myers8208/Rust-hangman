@@ -19,7 +19,7 @@ Rust
 
 * [Rust official website](https://www.rust-lang.org/tools/install)
 * [Rust textbook - functions](https://doc.rust-lang.org/book/ch03-03-how-functions-work.html)
-* [Name]()
+* [Rust textbook - loops](https://doc.rust-lang.org/reference/expressions/loop-expr.html)
 * [Name]()
 * [Name]()
 
