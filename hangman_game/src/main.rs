@@ -17,8 +17,11 @@ fn main() {
 
     // get_word();
     let mut word = String::new();
-    word = "face".to_string();    
-
+    word = "face".to_string(); 
+    let mut letters: Vec<char> = Vec::new();   
+    for letter in word.chars() {
+        letters.push('_');
+    }
     
     loop {
         println!("Guess a letter: ");
@@ -44,26 +47,36 @@ fn main() {
         // let guess: char = guess.trim().parse().expect("Please type a letter!");
         // let mut file = File::open("words.txt");
         
-        display_word(&word, guess);
+        display_word(&word, guess, letters.clone());
     }
 }
 
-fn display_word(word: &String, guess: char) {
+fn display_word(word: &String, guess: char, mut letters: Vec<char>) {
     // let length = word.len();
     // let letters = 
     // let user_guess = guess;
     for letter in word.chars() {
         // println!("This {letter}");
         if letter == guess {
-            print!("{letter}");
+            letters.push(letter);
+            // print!("{letter}");
         } else {
-            print!("_")
+            if letter.is_alphabetic() {
+                letters.push(letter);
+            } else {
+                letters.push('_');
+                // print!("_")
+            }
         }
         // match letter {
         //     {guess} => print!("{letter}"),
         //     _ => print!("_"),
         // };
         // println!("_");
+    }
+    for letter in letters {
+        // println!("Printing out the word");
+        print!("{letter}");
     }
     println!();
     println!("The word is {word}");
@@ -75,6 +88,10 @@ fn lines_from_file(filename: impl AsRef<Path>) -> Vec<String> {
     buf.lines()
         .map(|l| l.expect("Could not parse line"))
         .collect()
+}
+
+fn populateList() {
+
 }
 
 // fn get_word() {
