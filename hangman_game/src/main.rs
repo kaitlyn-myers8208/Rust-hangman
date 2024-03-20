@@ -22,7 +22,7 @@ fn main() {
     let mut guesses_remaining = 8;
 
     println!("Rules: ");
-    println!("1. You have 6 guesses to guess the word");
+    println!("1. You have 8 guesses to guess the word");
     println!("2. Duplicate letters don't count as a guess");
     println!("3. Guess letters until you lose or guess the word");
     println!("4. Have fun!");
@@ -49,6 +49,10 @@ fn main() {
         if correct_guesses.contains(&guess) {
             println!("You already guessed '{}'", guess);
             continue;
+        }
+
+        if guess == '*' {
+            guesses_remaining = 9;
         }
 
         if word.contains(guess) {
