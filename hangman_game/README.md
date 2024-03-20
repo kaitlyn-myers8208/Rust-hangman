@@ -18,13 +18,14 @@ Rust
 # Useful Websites
 
 * [Rust official website](https://www.rust-lang.org/tools/install)
-* [Rust textbook - functions](https://doc.rust-lang.org/book/ch03-03-how-functions-work.html)
-* [Rust textbook - loops](https://doc.rust-lang.org/reference/expressions/loop-expr.html)
-* [Name]()
-* [Name]()
+* [Rust textbook - Functions](https://doc.rust-lang.org/book/ch03-03-how-functions-work.html)
+* [Rust textbook - Loops](https://doc.rust-lang.org/reference/expressions/loop-expr.html)
+* [Rust textbook - Datatypes](https://doc.rust-lang.org/book/ch03-02-data-types.html)
+* [Rust Standard Library - Vectors](https://doc.rust-lang.org/std/vec/struct.Vec.html)
+* [Medium - Finding a Charater in a String](https://medium.com/@teamcode20233/finding-a-character-in-a-string-using-rust-2140a94cf512#:~:text=In%20Rust%2C%20the%20find(),not%20present%20in%20the%20string.)
 
 # Future Work
 
-* Add
-* Add
-* Add
+* Create cute graphic to display the man and incorrect guesses
+* Display incorrect guesses
+* Allow the user to pick the word and play with friends
