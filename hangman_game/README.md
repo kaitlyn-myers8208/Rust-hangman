@@ -4,7 +4,7 @@ This application is a console app written in Rust. It is a game of hangman that 
 
 My purpose is to develop an understanding of the basic syntax and workings of Rust through creating a console program.
 
-[Software Demo Video]()
+[Software Demo Video](https://www.loom.com/share/5bba9fe7f9c048d181614a6e0386d94d?sid=d1adc20b-5dab-44c8-a85f-d71da4faead3)
 
 # Development Environment
 
